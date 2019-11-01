@@ -11,7 +11,6 @@
 axios
   .get("https://lambda-times-backend.herokuapp.com/topics")
   .then(response => {
-    console.log(response.data.topics);
     response.data.topics.forEach(item => {
       item;
 
@@ -29,4 +28,7 @@ axios
 
       topics.appendChild(Tabs());
     });
+  })
+  .catch(error => {
+    console.log("The data was not returned", error);
   });
