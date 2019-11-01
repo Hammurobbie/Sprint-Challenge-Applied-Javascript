@@ -21,14 +21,10 @@
 axios
   .get("https://lambda-times-backend.herokuapp.com/articles")
   .then(response => {
-    console.log(response.data.articles);
     const topicArr = Object.values(response.data.articles);
-    console.log(topicArr);
 
     topicArr.forEach(topic => {
       topic.forEach(article => {
-        console.log(article);
-
         function createCard() {
           //create de babies
           const cardDiv = document.createElement("div"),
